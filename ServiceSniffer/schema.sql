@@ -1,7 +1,14 @@
+DROP TABLE if exists users;
 DROP TABLE if exists hosts;
 DROP TABLE if exists services;
 DROP TABLE if exists host_services;
 DROP TABLE if exists dataset;
+
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL
+);
 
 
 CREATE TABLE hosts (
